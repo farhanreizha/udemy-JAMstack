@@ -19,3 +19,10 @@ export const container = css`
 export const title = css`
   ${SR_ONLY}
 `
+
+export const postTitle = css`
+  font-size: 4.5rem;
+  text-align: center;
+  padding: 0 1ch;
+  color: var(--white);
+`

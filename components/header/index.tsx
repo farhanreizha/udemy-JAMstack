@@ -1,10 +1,24 @@
 import Logo from '@components/logo'
-import { container, title } from './header'
+import { container, title, postTitle } from './styles'
 
-const Header = () => (
+type headerProps = {
+  pageTitle?: string
+}
+
+const InternalTitle = ({ pageTitle }: { pageTitle: string }) => (
+  <h1 css={postTitle}>{pageTitle}</h1>
+)
+
+const Header = ({ pageTitle }: headerProps) => (
   <header css={container}>
-    <Logo />
-    <h1 css={title}>devlog</h1>
+    {typeof pageTitle !== 'undefined' ? (
+      <InternalTitle pageTitle={pageTitle} />
+    ) : (
+      <>
+        <Logo />
+        <h1 css={title}>devlog</h1>
+      </>
+    )}
   </header>
 )
 export default Header
