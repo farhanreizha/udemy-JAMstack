@@ -37,7 +37,6 @@ const formatPostList = async ({ filepath, slug }: PostFile) => {
   const frontMatter = data as FrontMatter
 
   const mdx = await renderToString(content, {
-    components: mdxComponents,
     scope: frontMatter,
   })
 
