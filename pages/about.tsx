@@ -1,6 +1,6 @@
 import { css, keyframes } from '@emotion/react'
+import Page from '@layouts/page'
 import Image from 'next/image'
-import Page from '@layouts/pages'
 import { FaReact as ReactIcon } from 'react-icons/fa'
 
 const rotate = keyframes`

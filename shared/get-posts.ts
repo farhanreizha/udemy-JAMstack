@@ -3,7 +3,6 @@ import path from 'path'
 import renderToString from 'next-mdx-remote/render-to-string'
 import type { MdxRemote } from 'next-mdx-remote/types'
 import matter from 'gray-matter'
-import mdxComponents from '@shared/mdx-components'
 
 type PostFile = {
   filepath: string
