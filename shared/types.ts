@@ -1,7 +1,6 @@
 import type { MdxRemote } from 'next-mdx-remote/types'
 import type { Unwrap } from './type-utilities'
 import { getYoutubeVideos } from './get-videos'
-import { TypeScriptConfig } from 'next/dist/server/config-shared'
 
 export type PostFile = {
   filepath: string

@@ -2,17 +2,17 @@ import Highlight, { defaultProps, Language } from 'prism-react-renderer'
 import theme from 'prism-react-renderer/themes/github'
 
 type CodeProps = {
-  children: string
+  codeString: string
   className?: string
 }
 
-const Code = ({ children, className = 'language-jsx' }: CodeProps) => {
+const Code = ({ codeString, className = 'language-jsx' }: CodeProps) => {
   const language = className.replace(/language-/, '') as Language
 
   return (
     <Highlight
       {...defaultProps}
-      code={children}
+      code={codeString}
       language={language}
       theme={theme}
     >

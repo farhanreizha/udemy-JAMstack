@@ -3,6 +3,7 @@ import path from 'path'
 import renderToString from 'next-mdx-remote/render-to-string'
 import matter from 'gray-matter'
 import { PostFile, FrontMatter } from './types'
+import components from './mdx-components'
 
 const getDirData = (source: string): PostFile[] =>
   readdirSync(source).map((name) => ({
@@ -16,6 +17,7 @@ const formatPostList = async ({ filepath, slug }: PostFile) => {
   const frontMatter = data as FrontMatter
 
   const mdx = await renderToString(content, {
+    components,
     scope: frontMatter,
   })
 
